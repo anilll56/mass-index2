@@ -1,0 +1,35 @@
+
+.result1css{
+    background-color: #d6cbd3;
+    width: 40rem;
+    height: 40rem;
+    border-radius: 10px;
+}
+.result2css{
+
+    width: 30rem;
+    height:30rem;
+    display: inline-block;
+    font-size: x-large;
+    margin-top: 4rem;
+}
+.ssCss{
+    margin-top: 3rem;
+}
+.resultButtoncss{
+
+    background-color: #f4511e;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    font-size: 16px;
+    margin: 4px 2px;
+    opacity: 0.6;
+    transition: 0.3s;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+}
+      
+.resultButtoncss:hover {opacity: 1}

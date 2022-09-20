@@ -1,23 +1,24 @@
-import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react';
+import {BrowserRouter as Router ,Routes,Route} from 'react-router-dom'
+import Firstpage from './components/Firstpage';
+import Resultpage from './components/Resultpage';
 
-function App() {
+const App =() =>{
+  const[weight , setWeight]=useState("");
+  const[size , setSize]=useState("");
+  const[ss,setSs]=useState("Değerleri yanlış girdiniz")
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+        <Routes>
+          <Route path='/'  element={<Firstpage weight={weight} setWeight={setWeight} size={size} setSize={setSize} />}  />
+          
+          <Route path='/Resultpage' element={<Resultpage  weight={weight} setWeight={setWeight} size={size} setSize={setSize} ss={ss} setSs={setSs} />}/>
+        </Routes>
+      </Router>
+
     </div>
   );
 }
